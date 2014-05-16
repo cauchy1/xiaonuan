@@ -5,6 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -19,11 +20,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	-->
+	
+	<link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/dist/js/bootstrap.js"></script>
+	
   </head>
   
   <body>
   
-	<form name="regFrom" action=anwser!getUserAnswers>
+	<form name="regFrom" action=anwser.action>
 	<label>问题1:</label>
 	<input type="text" name="answer"></input>
 	<input type="submit" value="提交">

@@ -5,10 +5,16 @@
 <constant name="struts.objectFactory" value="spring"></constant> 
 
 <package name="/" namespace="/" extends="struts-default">
-		<action name="anwser" class="org.xiaonuan.action.QuestionnaireAction" method="execute">
+		<action name="anwser" class="org.xiaonuan.action.QuestionnaireAction" method="getUserAnswers">
 			<result name="success" >/ok.jsp
 			</result>
 			<result name="fail" >/fail.jsp
+			</result>
+		</action>
+		
+		<action name="weibo" class="org.xiaonuan.action.WeiboAction" method="getWeiBo">
+			<result type="json" name="success" >
+				<param name="root">responseJson</param>
 			</result>
 		</action>
 </package>
